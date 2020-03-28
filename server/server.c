@@ -21,7 +21,7 @@ void *work(void *arg) {
     while (1) {
         char msg[512] = {0};
         if (recv(*fd, msg, sizeof(msg), 0) <= 0) {
-            printf("recv error\n");
+            printf("recv error or end !\n");
             break;
         }
         printf("recv: %s \n", msg);

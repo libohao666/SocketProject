@@ -34,3 +34,6 @@
 2.server/server.c	client/client.c
 
 3.创建编译、提交脚本
+
+4.fd更为数组
+
