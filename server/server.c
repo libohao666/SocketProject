@@ -26,10 +26,11 @@ void *work(void *arg) {
         }
         printf("recv: %s \n", msg);
         chstr(msg);
+        printf("chstr: %s\n", msg);
         if (send(*fd, msg, strlen(msg), 0) < 0) {
             printf("send error\n");
         }
-        printf("Sucess in ECHO\n\n");
+        printf("Sucess in ECHO\n-------------------------\n");
     }
     close(*fd);
     return NULL;
