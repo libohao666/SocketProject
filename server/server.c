@@ -36,7 +36,7 @@ void *work(void *arg) {
 }
 
 int main(int argc, char **argv) {
-    int port, server_listen, fd[1024], cnt = 0;
+    int port, server_listen, tmp, fd[1024], cnt = 0;
     
     if (argc != 2) {
         fprintf(stderr, "Usage : %s port! \n", argv[0]);
@@ -53,11 +53,12 @@ int main(int argc, char **argv) {
     pthread_t tid;
     
     while (1) {
-        if ((fd[cnt] = accept(server_listen, NULL, NULL)) < 0) {
+        if ((tmp = accept(server_listen, NULL, NULL)) < 0) {
             perror("accept");
         }
-
+        memcpy(&fd[cnt], &tmp, sizeof(tmp));
         pthread_create(&tid, NULL, work, (void *)&fd[cnt]);
+        printf("cnt: %d \n", cnt);
         cnt++;
         if (cnt >= 1024) cnt = 0;
     }
