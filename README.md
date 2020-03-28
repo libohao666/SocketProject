@@ -11,6 +11,6 @@ gcc -I common/ common/tcp_server.c server/server.c
 
 头文件提到tcp_server.h	tcp_client.h
 
-2.server/server.c
+2.server/server.c	client/client.c
 
-3.client/client.c
+3.创建编译、提交脚本
