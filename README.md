@@ -2,10 +2,11 @@
 
 ```bash
 .
-├── a.out
 ├── client
 │   └── client.c
 ├── common
+│   ├── common.c
+│   ├── common.h
 │   ├── head.h
 │   ├── tcp_client.c
 │   ├── tcp_client.h
@@ -18,7 +19,6 @@
 ├── README.md
 └── server
     └── server.c
-
 ```
 
 

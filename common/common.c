@@ -7,5 +7,5 @@ int make_nonblock_ioctl(int fd) {
 
 int make_block_ioctl(int fd) {
     unsigned long ul = 0;
-    iotcl(fd, FIONBIO, &ul);
+    ioctl(fd, FIONBIO, &ul);
 }
