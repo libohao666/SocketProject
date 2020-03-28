@@ -1,9 +1,6 @@
 # SocketProject
 
-```bash
-gcc -I common/ common/tcp_server.c server/server.c 
-
-```
+步骤：
 
 1.server.c	client.c	拷贝到common
 
