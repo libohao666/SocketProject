@@ -1,3 +1,4 @@
+void *get_value(char *path, char *key);
 void make_nonblock_ioctl(int fd);
 void make_block_ioctl(int fd);
 void make_nonblock(int fd);

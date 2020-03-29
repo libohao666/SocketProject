@@ -1,0 +1,1 @@
+gcc -I common/ common/common.c chatroom/test.c

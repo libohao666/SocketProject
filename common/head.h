@@ -8,3 +8,4 @@
 #include <pthread.h>
 #include <sys/ioctl.h>
 #include <fcntl.h>
+char conf_ans[50];
